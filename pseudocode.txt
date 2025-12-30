@@ -1,0 +1,26 @@
+ALGORİTMA: Collatz_Anahtar_Ureteci
+GİRDİ: Seed (Başlangıç Değeri), Uzunluk (İstenen Bit Sayısı)
+ÇIKTI: Binary Anahtar Dizisi
+
+BAŞLA
+    Anahtar = "" 
+    GecerliSayı = Seed
+    
+    DÖNGÜ (Anahtar'ın uzunluğu < Uzunluk) OLDUĞU SÜRECE:
+        EĞER (GecerliSayı ÇİFT ise):
+            GecerliSayı = GecerliSayı / 2
+        DEĞİLSE (GecerliSayı TEK ise):
+            GecerliSayı = (GecerliSayı * 3) + 1
+        SON EĞER
+        
+        Bit = GecerliSayı MOD 2  // Sayı çiftse 0, tekse 1 ekle
+        Anahtar = Anahtar + Bit
+        
+        // 4-2-1 döngüsüne girmemek için kontrol:
+        EĞER (GecerliSayı == 1) İSE:
+            GecerliSayı = Seed + Anahtar'ın Mevcut Uzunluğu
+        SON EĞER
+        
+    SON DÖNGÜ
+    YAZDIR Anahtar
+BİTİŞ
