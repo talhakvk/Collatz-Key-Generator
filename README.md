@@ -17,6 +17,3 @@ Bu algoritma, verilen bir başlangıç sayısı (seed) üzerinden Collatz dizisi
 3. Her sonucun $mod 2$ değeri (0 veya 1) anahtar dizisine eklenir.
 4. Eğer sayı $1$'e ulaşırsa, döngüye girmemek için `Seed + Mevcut Uzunluk` formülüyle yeni bir sayı atanır.
 5. İstenen uzunluğa ulaşıldığında dizi Hexadecimal formatına çevrilir.
-
-## 📊 Akış Şeması (Flowchart)
-Algoritmanın işleyişini gösteren akış şeması aşağıdadır:
