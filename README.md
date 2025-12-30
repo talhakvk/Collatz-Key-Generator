@@ -20,20 +20,3 @@ Bu algoritma, verilen bir başlangıç sayısı (seed) üzerinden Collatz dizisi
 
 ## 📊 Akış Şeması (Flowchart)
 Algoritmanın işleyişini gösteren akış şeması aşağıdadır:
-
-```mermaid
-flowchart TD
-    StartNode([BAŞLAT]) --> Input[/Seed ve Bit Uzunluğu Gir/]
-    Input --> LoopDecision{İstenen Uzunluğa<br/>Ulaşıldı mı?}
-    LoopDecision -- Hayır --> Parity{Sayı Çift mi?}
-    Parity -- Evet --> Even[n = n / 2]
-    Parity -- Hayır --> Odd[n = 3n + 1]
-    Even --> AddBit[Sayının Mod 2 değerini<br/>Anahtara Ekle]
-    Odd --> AddBit
-    AddBit --> CheckOne{n == 1?}
-    CheckOne -- Evet --> Reset[n = Seed + Mevcut Uzunluk<br/>Döngü Kırıcı]
-    CheckOne -- Hayır --> LoopDecision
-    Reset --> LoopDecision
-    LoopDecision -- Evet --> ToHex[Binary Dizisini<br/>Hexadecimal'e Çevir]
-    ToHex --> Output[/Final Anahtarı Yazdır/]
-    Output --> EndNode([BİTİŞ])
